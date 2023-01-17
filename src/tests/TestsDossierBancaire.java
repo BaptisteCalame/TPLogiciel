@@ -36,4 +36,30 @@ public class TestsDossierBancaire {
 			System.out.println(e.getMessage());
 		}
 	}
+	
+	@Test  
+	public void testConstructeurCourant() 
+	{
+		CompteCourant courant = new CompteCourant();
+		try {
+			courant.add_solde(150);
+			assertEquals(150,dossier.consulter(),0);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	@Test  
+	public void testDeposerCourant() 
+	{
+		DossierBancaire dossier = new DossierBancaire();
+		try {
+			dossier.deposer(150);
+			assertEquals(150,dossier.consulter(),0);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
 }
