@@ -10,6 +10,8 @@ public class DossierBancaire {
     public DossierBancaire()
     {
     	solde_tot = 0;
+    	m_courant = new CompteCourant();
+    	
     }
 
     public void deposer(double somme) {
