@@ -35,7 +35,7 @@ public class GUI  implements ActionListener
     	//Element affichage solde
         m_display_solde = new JTextField (20);
         m_display_solde.setEditable(false); //Pour eviter d'ecrire
-        m_display_solde.setText(Double.toString(m_dossier.get_solde()));
+        m_display_solde.setText(Double.toString(m_dossier.consulter()));
         
         
         //Initialisation de la fenetre generale
@@ -67,6 +67,6 @@ public class GUI  implements ActionListener
     	{
     		m_dossier.remunerer();
     	}
-    	m_display_solde.setText(Double.toString(m_dossier.get_solde()));  	
+    	m_display_solde.setText(Double.toString(m_dossier.consulter()));  	
     }
 }

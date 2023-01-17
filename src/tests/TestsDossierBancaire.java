@@ -13,7 +13,7 @@ public class TestsDossierBancaire {
 	{
 		DossierBancaire dossier=new DossierBancaire();
 		dossier.deposer(200);
-		assertEquals(200,dossier.get_solde(),0);
+		assertEquals(200,dossier.consulter(),0);
 	}
 	
 	@Test
@@ -22,7 +22,7 @@ public class TestsDossierBancaire {
 		DossierBancaire dossier=new DossierBancaire();
 		dossier.deposer(100);
 		dossier.remunerer();
-		assertEquals(101.92,dossier.get_solde(),0);
+		assertEquals(101.92,dossier.consulter(),0);
 	}
 	
 	@Test  
@@ -31,7 +31,7 @@ public class TestsDossierBancaire {
 		DossierBancaire dossier = new DossierBancaire();
 		try {
 			dossier.deposer(150);
-			assertEquals(150,dossier.get_solde(),0);
+			assertEquals(150,dossier.consulter(),0);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
