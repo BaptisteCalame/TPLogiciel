@@ -10,10 +10,10 @@ public class DossierBancaire {
 	//Constructeur
     public DossierBancaire()
     {
-    	solde_total = 0;
+    	solde_total = 0; //ceci est un commentaire
     	m_courant = new CompteCourant();
     	m_epargne = new CompteEpargne();
-    	
+    	//et ceci en est un autre
     	m_courant.solde = 0;
     	m_epargne.solde = 0;
     }
