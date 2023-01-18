@@ -14,6 +14,6 @@ public class Compte {
 	}
 	public void add_solde(double somme)
 	{
-		solde += somme;
+		solde = solde + somme;
 	}
 }
