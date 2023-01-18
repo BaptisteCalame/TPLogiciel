@@ -1,19 +1,19 @@
 package myPackage;
 
 public class Compte {
-	protected double solde;
+	protected double solde_compte;
 	
 	public Compte()
 	{
-		solde = 0;
+		solde_compte = 0;
 	}
 	
 	public double get_solde()
 	{
-		return solde;
+		return solde_compte;
 	}
 	public void add_solde(double somme)
 	{
-		solde = solde + somme;
+		solde_compte = solde_compte + somme;
 	}
 }
