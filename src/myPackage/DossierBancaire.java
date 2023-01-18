@@ -5,12 +5,12 @@ public class DossierBancaire {
 	private CompteCourant m_courant;
 	private CompteEpargne m_epargne;
 	
-	private double solde_tot;
+	private double solde_total;
 	
 	//Constructeur
     public DossierBancaire()
     {
-    	solde_tot = 0;
+    	solde_total = 0;
     	m_courant = new CompteCourant();
     	m_epargne = new CompteEpargne();
     	
@@ -24,8 +24,8 @@ public class DossierBancaire {
     }
     
     public double consulter() {
-    	solde_tot = m_epargne.solde + m_courant.solde;
-    	return solde_tot;
+    	solde_total = m_epargne.solde + m_courant.solde;
+    	return solde_total;
     }
     
     public void remunerer() {
