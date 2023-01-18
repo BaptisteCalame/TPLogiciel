@@ -14,8 +14,8 @@ public class DossierBancaire {
     	m_courant = new CompteCourant();
     	m_epargne = new CompteEpargne();
     	//et ceci en est un autre
-    	m_courant.solde = 0;
-    	m_epargne.solde = 0;
+    	m_courant.solde_compte = 0;
+    	m_epargne.solde_compte = 0;
     }
 
     public void deposer(double somme) {
@@ -24,12 +24,12 @@ public class DossierBancaire {
     }
     
     public double consulter() {
-    	solde_total = m_epargne.solde + m_courant.solde;
+    	solde_total = m_epargne.solde_compte + m_courant.solde_compte;
     	return solde_total;
     }
     
     public void remunerer() {
-    	m_epargne.add_solde(0.032 * m_epargne.solde);
+    	m_epargne.add_solde(0.032 * m_epargne.solde_compte);
     }
     
     public CompteEpargne get_epargne() {
