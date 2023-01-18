@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import myPackage.CompteCourant;
 import myPackage.DossierBancaire;
 
 public class TestsDossierBancaire {
@@ -62,7 +61,7 @@ public class TestsDossierBancaire {
 		{
 			dossier.retirer(60);
 		}
-		catch (Exception e)
+		catch (Exception e)		
 		{
 			System.out.println(e.getMessage());
 		}
@@ -80,8 +79,9 @@ public class TestsDossierBancaire {
 		}
 		catch (Exception e)
 		{
-			System.out.println(e.getMessage());
+			System.out.println(e.getMessage());		// Lève une exception si le retrait est supérieur au solde du compte courant
 		}
-		assertEquals(dossier.get_courant().get_solde(), 40, 0);
+		assertEquals(dossier.get_courant().get_solde(), 40, 0);	
+		
 	}		
 }

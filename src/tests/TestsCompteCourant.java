@@ -40,11 +40,11 @@ public class TestsCompteCourant {
 	}
 	
 	@Test
-	public void testRetraitVerif()
+	public void testRetraitVerif()	// Vérification du cas où le retrait est supérieur au solde
 	{
 		CompteCourant courant = new CompteCourant();
 		courant.add_solde(40);
-		try
+		try	
 		{
 			courant.retrait(50);
 		}

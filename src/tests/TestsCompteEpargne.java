@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import myPackage.CompteCourant;
 import myPackage.CompteEpargne;
 
 public class TestsCompteEpargne {

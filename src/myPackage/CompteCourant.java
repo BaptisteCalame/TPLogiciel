@@ -1,9 +1,9 @@
 package myPackage;
 
-public class CompteCourant extends Compte{
+public class CompteCourant extends Compte{		// Hérite de la classe compte
 
 	public CompteCourant() {
-		super();
+		super();	// Accède au constructeur de la classe parent (ici Compte)
 	}
 	
 	public void retrait(double somme) throws Exception

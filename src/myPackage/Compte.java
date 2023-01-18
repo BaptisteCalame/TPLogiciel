@@ -1,7 +1,7 @@
 package myPackage;
 
 public class Compte {
-	protected double solde_compte;
+	protected double solde_compte;	// Protected donc accessible par les autres classes du package "myPackage"
 	
 	public Compte()
 	{
