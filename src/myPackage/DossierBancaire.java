@@ -39,5 +39,17 @@ public class DossierBancaire {
     public CompteCourant get_courant() {
     	return m_courant;
     }
+    
+    public void retirer(double somme)
+    {
+    	try
+    	{
+        	m_courant.retrait(somme);	
+    	}
+    	catch (Exception e)
+    	{
+    		System.out.println(e.getMessage());
+    	}
+    }
 	
 }

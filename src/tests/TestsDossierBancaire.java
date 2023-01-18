@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import myPackage.CompteCourant;
 import myPackage.DossierBancaire;
 
 public class TestsDossierBancaire {
@@ -52,6 +53,35 @@ public class TestsDossierBancaire {
 		}
 	}
 	
+	@Test
+	public void testRetirer()
+	{
+		DossierBancaire dossier = new DossierBancaire();
+		dossier.get_courant().add_solde(100);
+		try
+		{
+			dossier.retirer(60);
+		}
+		catch (Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		assertEquals(dossier.get_courant().get_solde(), 40, 0);
+	}
 	
-	
+	@Test
+	public void testRetraitVerif()
+	{
+		DossierBancaire dossier = new DossierBancaire();
+		dossier.get_courant().add_solde(40);
+		try
+		{
+			dossier.retirer(50);
+		}
+		catch (Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		assertEquals(dossier.get_courant().get_solde(), 40, 0);
+	}		
 }
